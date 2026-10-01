@@ -1,0 +1,1 @@
+function i(){document.querySelectorAll(".home-hero-copy, .home-console, .highlights-section").forEach((e,o)=>{setTimeout(()=>e.classList.add("animate-in"),80*o)})}export{i as initializeHomeAnimations};

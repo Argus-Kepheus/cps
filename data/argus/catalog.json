@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-01T16:18:36.619898+00:00",
+  "challenges": [
+    {
+      "id": "mlf",
+      "slug": "mittag-leffler",
+      "name": "Função de Mittag-Leffler",
+      "short_name": "Mittag-Leffler",
+      "status": "active",
+      "summary": "Desafio científico-computacional dedicado à avaliação numérica eficiente, precisa e reprodutível da função de Mittag-Leffler.",
+      "website_path": "/desafios/mittag-leffler/",
+      "domain": {
+        "area": "computational-mathematics",
+        "topics": [
+          "special-functions",
+          "numerical-analysis",
+          "scientific-computing"
+        ]
+      },
+      "variants": [
+        {
+          "id": "1p",
+          "slug": "one-parameter",
+          "name": "Uniparamétrica",
+          "short_name": "1P",
+          "status": "active",
+          "description": "Variante da função de Mittag-Leffler com um parâmetro independente alpha."
+        }
+      ],
+      "category_dimensions": {
+        "programming_language": {
+          "id": "programming_language",
+          "label": "Linguagem",
+          "values": [
+            {
+              "id": "octave",
+              "name": "GNU Octave"
+            },
+            {
+              "id": "julia",
+              "name": "Julia"
+            }
+          ]
+        }
+      },
+      "evaluation": {
+        "families": [
+          "automated-benchmark"
+        ]
+      },
+      "background": [
+        {
+          "id": "accuracy-and-precision",
+          "title": "Precisão e critérios de avaliação",
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 1,
+              "text": "Precisão e critérios de avaliação"
+            },
+            {
+              "type": "paragraph",
+              "text": "Este material apresenta a lógica geral usada para avaliar correção numérica no desafio Mittag-Leffler. Os valores exatos de domínio, tolerâncias, ambiente, protocolo de tempo e desempates pertencem a cada edição ou participação específica e devem ser consultados na documentação publicada para aquela realização."
+            },
+            {
+              "type": "paragraph",
+              "text": "O website publica os critérios autorizados e pode executar verificações preliminares de arquivos, mas a avaliação autoritativa das soluções ocorre em infraestrutura separada."
+            },
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "Como a precisão é avaliada"
+            },
+            {
+              "type": "paragraph",
+              "text": "Uma solução só deve seguir para comparação de desempenho quando satisfaz simultaneamente os critérios de precisão definidos para a realização correspondente. A avaliação compara a saída do algoritmo com uma referência numérica de maior precisão por métricas que capturam tanto o pior erro pontual quanto o comportamento agregado."
+            },
+            {
+              "type": "paragraph",
+              "text": "Em geral, são consideradas três famílias de medida:"
+            },
+            {
+              "type": "unordered-list",
+              "items": [
+                "**erro absoluto máximo** — a maior diferença absoluta, ponto a ponto, entre a saída e a referência;",
+                "**erro relativo máximo** — a maior diferença relativa, com proteção apropriada perto de zero;",
+                "**erro relativo RMS** — uma medida agregada do erro relativo sobre o conjunto de pontos."
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Os limites aplicáveis precisam ser satisfeitos simultaneamente. Ultrapassar a precisão mínima exigida não substitui as demais regras de classificação definidas para a realização."
+            },
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "Por que usar múltiplas métricas"
+            },
+            {
+              "type": "paragraph",
+              "text": "Uma única medida pode ocultar comportamentos numéricos indesejados. O erro absoluto é importante perto de zero; o erro relativo permite comparar escalas diferentes; e o RMS resume o comportamento do conjunto sem substituir a verificação do pior caso. A combinação reduz o risco de uma solução parecer adequada apenas por causa de uma média favorável ou de uma região específica do domínio."
+            },
+            {
+              "type": "paragraph",
+              "text": "As tolerâncias devem respeitar a aritmética utilizada, a qualidade verificável da referência e a variação legítima entre algoritmos numericamente corretos. Por isso, os números concretos são versionados junto da edição ou participação que os utiliza, em vez de serem tratados como propriedade permanente do desafio."
+            },
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "Nota sobre estabilidade numérica"
+            },
+            {
+              "type": "paragraph",
+              "text": "A avaliação eficiente da função de Mittag-Leffler pode exigir formulações diferentes da série direta dependendo do domínio. Em regimes numericamente exigentes, uma implementação ingênua pode sofrer cancelamento ou perda significativa de precisão mesmo quando termina sem erro de execução. Estabilidade numérica e desempenho devem, portanto, ser tratados como requisitos distintos."
+            }
+          ]
+        },
+        {
+          "id": "overview",
+          "title": "Fundamentação pública — Mittag-Leffler",
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 1,
+              "text": "Fundamentação pública — Mittag-Leffler"
+            },
+            {
+              "type": "paragraph",
+              "text": "Esta área reúne material teórico curado para compreender o desafio sem expor datasets ocultos, gabaritos privados, submissões de terceiros ou detalhes internos da infraestrutura de avaliação."
+            },
+            {
+              "type": "paragraph",
+              "text": "A fundamentação pública descreve o problema e os conceitos necessários. Parâmetros competitivos concretos — como domínio, linguagem, tolerâncias, limites de recursos e protocolo de benchmark — pertencem a cada edição ou participação específica e devem ser lidos na documentação correspondente."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "editions": []
+}

@@ -1,0 +1,30 @@
+{
+  "generatedAt": "2026-10-01T16:19:46.708Z",
+  "site": {
+    "siteUrl": "https://cps.arguskepheus.com.br",
+    "basePath": "/",
+    "defaultLocale": "pt",
+    "supportedLocales": [
+      "pt",
+      "es"
+    ]
+  },
+  "assets": {
+    "css": "assets/style-MDHGEJQD.css",
+    "componentLoader": "assets/app-AHIV7DQA.js",
+    "js": "assets/app-O6W7FW2L.js"
+  },
+  "locales": {
+    "es": "es.476f669707.json",
+    "pt": "pt.ac35f6981c.json"
+  },
+  "copied": {
+    "sourceDirectories": [
+      "components",
+      "palettes",
+      "images",
+      "locales"
+    ],
+    "publicDirectory": "public"
+  }
+}

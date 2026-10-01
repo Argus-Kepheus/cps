@@ -1,0 +1,602 @@
+{
+  "schema_version": 1,
+  "preview_id": "H1",
+  "status": "informal-prepublication-pilot",
+  "edition_id": "ak-mlf-1p-octave-pilot-01",
+  "challenge_id": "mlf",
+  "challenge_slug": "mittag-leffler",
+  "challenge_name": "Função de Mittag-Leffler",
+  "title": "Participação de teste — pré-publicação",
+  "not_official_competition": true,
+  "fee": null,
+  "award": null,
+  "documents": [
+    {
+      "id": "guide",
+      "title": "Guia do participante — participação de teste",
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "Guia do participante — participação de teste"
+        },
+        {
+          "type": "paragraph",
+          "text": "> **Status:** pré-publicação, participação informal de teste. Esta participação não é uma edição oficial, não cobra taxa, não oferece prêmio e não cria direito futuro. Seu objetivo é testar documentação, envio e integração com a infraestrutura de avaliação com participantes humanos convidados."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "1. Objetivo"
+        },
+        {
+          "type": "paragraph",
+          "text": "Você deve implementar, em GNU Octave, uma função que calcule a função de Mittag-Leffler uniparamétrica"
+        },
+        {
+          "type": "code",
+          "text": "E_alpha(z) = sum_{k=0}^infinito z^k / Gamma(alpha*k + 1)"
+        },
+        {
+          "type": "paragraph",
+          "text": "na condição desta participação de teste: `alpha = 0.2`; `z` real negativo; `3 <= |z| <= 10`; workload desta participação `1000 x 1000` (`1.000.000` de pontos)."
+        },
+        {
+          "type": "paragraph",
+          "text": "A entrega é individual. Formação acadêmica não é critério desta participação de teste."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "2. O que você entrega"
+        },
+        {
+          "type": "paragraph",
+          "text": "Exatamente dois arquivos soltos, na mesma submissão:"
+        },
+        {
+          "type": "code",
+          "text": "solution.m\nreport.json"
+        },
+        {
+          "type": "paragraph",
+          "text": "Não envie ZIP, PDF, pasta, executável ou terceiro arquivo. Consulte `participant-technical-specification.md` para o contrato completo."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "3. Uso de IA e LLMs"
+        },
+        {
+          "type": "paragraph",
+          "text": "Assistência por IA/LLMs é permitida. Você pode fornecer este guia e a especificação técnica integralmente a ChatGPT, Claude, Gemini, Copilot ou outro assistente. Não é necessário entregar prompts, histórico de chats ou logs de IA nesta participação de teste."
+        },
+        {
+          "type": "paragraph",
+          "text": "Você continua responsável por conferir a matemática, o código, licenças/atribuições aplicáveis e a conformidade dos dois arquivos entregues. O uso de IA não autoriza acesso a dataset/gabarito oculto, infraestrutura privada de avaliação ou submissões de terceiros."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "4. Como a avaliação funciona"
+        },
+        {
+          "type": "paragraph",
+          "text": "A avaliação autoritativa é objetiva, automatizada e ocorre fora deste website. O navegador não executa a solução nem calcula as métricas competitivas:"
+        },
+        {
+          "type": "paragraph",
+          "text": "1. **intake/validation** — contrato dos dois arquivos, interface, JSON e hashes; 2. **accuracy** — três métricas precisam passar simultaneamente; 3. **performance** — apenas soluções aprovadas em accuracy seguem para benchmark; 4. **ranking** — menor tempo válido observado, com margem de equivalência temporal e desempates publicados na especificação."
+        },
+        {
+          "type": "paragraph",
+          "text": "NaN ou Inf causam falha determinística antes do cálculo das métricas de accuracy."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "5. Ambiente"
+        },
+        {
+          "type": "paragraph",
+          "text": "O ambiente contratado usa GNU Octave 11.3.0, apenas o núcleo (nenhum pacote Octave Forge), sem rede, cota agregada de 1,0 CPU-equivalente, 512 MiB de memória e timeout de 60 s por execução."
+        },
+        {
+          "type": "paragraph",
+          "text": "Esse timeout é um watchdog operacional de segurança, não a métrica usada para ordenar o ranking. O tempo competitivo é `solution_elapsed_seconds`, definido no protocolo de benchmark; custos de inicialização e infraestrutura podem ocorrer fora dessa janela."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "6. Tempo competitivo"
+        },
+        {
+          "type": "paragraph",
+          "text": "O tempo autoritativo desta participação não é apenas o corpo abstrato da sua função. Ele é o **wall-clock de uma invocação isolada do participante**, medido por infraestrutura externa, e inclui startup/inicialização do processo Octave isolado e leitura/interpretação do seu `solution.m`. Não há warm-up."
+        },
+        {
+          "type": "paragraph",
+          "text": "A estatística competitiva é o **menor tempo válido observado**. O protocolo começa com 5 rodadas e pode avançar em blocos globais de 5 até 20 rodadas. A margem de equivalência temporal congelada é `0.018617153 s`."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "7. Accuracy"
+        },
+        {
+          "type": "paragraph",
+          "text": "Para a referência autoritativa `r_i` e saída `y_i`:"
+        },
+        {
+          "type": "code",
+          "text": "abs_error_i = |y_i - r_i|\nrel_error_i = abs_error_i / max(|r_i|, tau)\nE_abs_inf   = max(abs_error_i)\nE_rel_inf   = max(rel_error_i)\nE_rms       = sqrt(mean(rel_error_i^2))"
+        },
+        {
+          "type": "paragraph",
+          "text": "com:"
+        },
+        {
+          "type": "code",
+          "text": "tau      = 1e-6\nABS_TOL  = 1e-12\nREL_TOL  = 1e-11\nRMS_TOL  = 1e-12"
+        },
+        {
+          "type": "paragraph",
+          "text": "Os três limites precisam ser satisfeitos simultaneamente."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "8. Ranking e equivalência temporal"
+        },
+        {
+          "type": "paragraph",
+          "text": "Tempos dentro de `0.018617153 s`, agrupados conforme o protocolo desta participação, são temporalmente equivalentes. **Os itens abaixo são critérios de desempate aplicados somente dentro desse grupo temporalmente equivalente**:"
+        },
+        {
+          "type": "paragraph",
+          "text": "1. menor `precision_score`; 2. `received_at` autoritativo mais antigo — portanto, entre submissões ainda empatadas em tempo e precisão, a que foi recebida primeiro tem preferência; 3. se até o instante de recebimento for idêntico, `submission_id` é usado apenas como desempate técnico residual e determinístico, em ordem lexicográfica. Ele não representa a ordem de envio e não substitui `received_at`."
+        },
+        {
+          "type": "paragraph",
+          "text": "O `precision_score` é:"
+        },
+        {
+          "type": "code",
+          "text": "max(E_abs_inf/ABS_TOL, E_rel_inf/REL_TOL, E_rms/RMS_TOL)"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "9. Prepare `solution.m`"
+        },
+        {
+          "type": "paragraph",
+          "text": "A assinatura obrigatória é:"
+        },
+        {
+          "type": "code",
+          "text": "function E = solution(alpha, z)"
+        },
+        {
+          "type": "paragraph",
+          "text": "A matriz inteira é recebida em uma única chamada e `E` deve ter a mesma dimensão de `z`. Funções auxiliares podem existir apenas dentro do próprio `solution.m`; para portabilidade no Octave desta participação de teste, mantenha a função principal primeiro e auxiliares locais depois dela. Não delegue a execução a C, C++, Fortran, Python, Assembly, arquivos `.oct`, MEX ou outros binários externos: essa violação de integridade implica desclassificação (`DISQUALIFIED`)."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "10. Prepare `report.json`"
+        },
+        {
+          "type": "paragraph",
+          "text": "Use o arquivo de exemplo. `participant` é um **handle público**, não seu nome legal. Todos os campos são obrigatórios; não acrescente chaves e não repita chaves."
+        },
+        {
+          "type": "paragraph",
+          "text": "Depois de finalizar `solution.m`, calcule o SHA-256 do arquivo e coloque-o em `solution_sha256`. Não altere `solution.m` depois disso. Esse hash cria uma trilha de transparência nos dois sentidos: permite verificar que o arquivo recebido e avaliado é byte a byte o mesmo que foi submetido, e o SHA-256 da solução classificada será publicado no ranking final para que terceiros possam auditar a correspondência entre arquivo e resultado."
+        },
+        {
+          "type": "paragraph",
+          "text": "Windows:"
+        },
+        {
+          "type": "code",
+          "text": "certutil -hashfile solution.m SHA256"
+        },
+        {
+          "type": "paragraph",
+          "text": "Linux/macOS:"
+        },
+        {
+          "type": "code",
+          "text": "sha256sum solution.m"
+        },
+        {
+          "type": "paragraph",
+          "text": "Os dois arquivos devem ser UTF-8 sem BOM; LF ou CRLF são aceitos."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "11. Exemplo desta participação"
+        },
+        {
+          "type": "paragraph",
+          "text": "`templates/example-submission/` contém um `solution.m` e um `report.json` estruturalmente válidos. O algoritmo do exemplo existe para demonstrar interface/empacotamento: **não é estratégia recomendada, não é competitivo e não há garantia de passar o gate de accuracy no domínio desta participação**."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "12. Checklist antes de entregar"
+        },
+        {
+          "type": "unordered-list",
+          "items": [
+            "[ ] somente `solution.m` e `report.json`;",
+            "[ ] assinatura `solution(alpha, z)` correta;",
+            "[ ] saída finita, real e com a mesma dimensão de `z`;",
+            "[ ] somente GNU Octave core 11.3.0;",
+            "[ ] UTF-8 sem BOM;",
+            "[ ] JSON com as 9 chaves obrigatórias e sem duplicatas;",
+            "[ ] `solution_sha256` corresponde aos bytes finais de `solution.m`;",
+            "[ ] nenhuma alteração em `solution.m` após calcular o hash."
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "13. Como entregar nesta participação de teste"
+        },
+        {
+          "type": "paragraph",
+          "text": "Nesta participação de teste, os dois arquivos são enviados pelo formulário específico do website. O website realiza apenas o preflight local e o recebimento; a validação autoritativa ocorre depois, em infraestrutura de avaliação separada. Uma confirmação de envio não significa que a submissão foi aprovada ou avaliada. Essa logística não é precedente de uma futura edição oficial."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "14. Dúvidas e ambiguidades"
+        },
+        {
+          "type": "paragraph",
+          "text": "Se uma regra parecer ausente, contraditória ou ambígua, informe ao organizador. A pergunta pode ser registrada de forma não sensível como evidência de `DOCUMENTATION GAP`, `AMBIGUOUS RULE`, `MISSING EXAMPLE`, `MISSING PROCEDURE` ou `MISLEADING WORDING` para melhorar a documentação. O organizador não deve orientar individualmente a estratégia científica da sua solução."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "15. Autoridades"
+        },
+        {
+          "type": "paragraph",
+          "text": "Este guia resume a participação de teste. Em caso de conflito técnico, prevalece `participant-technical-specification.md`, derivada dos contratos e configurações versionados desta participação de teste. Regras jurídicas/comerciais do certame futuro ainda não estão sendo estabelecidas por este documento."
+        }
+      ]
+    },
+    {
+      "id": "technical_specification",
+      "title": "Especificação técnica do participante — participação de teste",
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "Especificação técnica do participante — participação de teste"
+        },
+        {
+          "type": "paragraph",
+          "text": "> Documento técnico e normativo para a participação informal de teste. Pode ser fornecido integralmente a um assistente de IA. Não contém dataset/gabarito oculto nem detalhes privados da infraestrutura de avaliação."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "1. Problema"
+        },
+        {
+          "type": "code",
+          "text": "E_alpha(z) = sum_{k=0}^infinito z^k / Gamma(alpha*k + 1)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Parâmetros desta participação de teste:"
+        },
+        {
+          "type": "code",
+          "text": "alpha = 0.2\nz: double real negativo\n3 <= |z| <= 10\nshape = 1000 x 1000\npoint_count = 1,000,000"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "2. Interface obrigatória"
+        },
+        {
+          "type": "paragraph",
+          "text": "Arquivo: `solution.m`."
+        },
+        {
+          "type": "code",
+          "text": "function E = solution(alpha, z)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Contrato:"
+        },
+        {
+          "type": "unordered-list",
+          "items": [
+            "`alpha`: escalar real;",
+            "`z`: matriz real; no workload desta participação, `1000 x 1000`;",
+            "a matriz inteira é passada em uma única chamada;",
+            "`E`: matriz real com a mesma dimensão de `z`;",
+            "`NaN`/`Inf` falham deterministicamente;",
+            "funções auxiliares são permitidas somente no próprio `solution.m`; mantenha a função principal antes das auxiliares locais;",
+            "arquivos auxiliares/subpastas não são aceitos."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Não é permitido delegar execução para C/C++/Fortran/Python/Assembly, `.oct`, MEX, executáveis ou binários externos. Essa violação de integridade implica desclassificação (`DISQUALIFIED`)."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "3. Accuracy"
+        },
+        {
+          "type": "paragraph",
+          "text": "Para cada elemento:"
+        },
+        {
+          "type": "code",
+          "text": "abs_error_i = |y_i - r_i|\nrel_error_i = abs_error_i / max(|r_i|, tau)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Métricas:"
+        },
+        {
+          "type": "code",
+          "text": "E_abs_inf = max(abs_error_i)\nE_rel_inf = max(rel_error_i)\nE_rms     = sqrt(mean(rel_error_i^2))"
+        },
+        {
+          "type": "paragraph",
+          "text": "Parâmetros:"
+        },
+        {
+          "type": "code",
+          "text": "tau     = 1e-6\nABS_TOL = 1e-12\nREL_TOL = 1e-11\nRMS_TOL = 1e-12"
+        },
+        {
+          "type": "paragraph",
+          "text": "Gate:"
+        },
+        {
+          "type": "code",
+          "text": "E_abs_inf <= ABS_TOL\nAND E_rel_inf <= REL_TOL\nAND E_rms <= RMS_TOL"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "4. Desempenho e tempo medido"
+        },
+        {
+          "type": "paragraph",
+          "text": "Estatística autoritativa desta participação:"
+        },
+        {
+          "type": "paragraph",
+          "text": "**minimum valid observed isolated participant invocation wall-clock time**."
+        },
+        {
+          "type": "paragraph",
+          "text": "A janela medida inclui:"
+        },
+        {
+          "type": "unordered-list",
+          "items": [
+            "criação/startup do processo Octave participante isolado;",
+            "inicialização do interpretador nesse processo;",
+            "leitura/parsing/loading do próprio `solution.m`;",
+            "a invocação `solution(alpha, Z)`;",
+            "alocações e operações realizadas dentro dessa invocação;",
+            "transporte binário interno de dados que ocorra dentro da janela do protocolo."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Não entram na métrica competitiva:"
+        },
+        {
+          "type": "unordered-list",
+          "items": [
+            "subida do container/orquestração externa;",
+            "leitura CSV do dataset pelo driver trusted;",
+            "serialização CSV final;",
+            "cálculo de accuracy."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Não há warm-up. O tamanho/estrutura do `solution.m` pode afetar o tempo de loading."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "5. Repetições"
+        },
+        {
+          "type": "code",
+          "text": "warmup = 0\nminimum = 5\nincrement = 5\nmaximum = 20\nscheduler = interleaved_round_robin\nstatistic = minimum\nbenchmark_equivalence_margin_seconds = 0.018617153"
+        },
+        {
+          "type": "paragraph",
+          "text": "Extensões são globais: uma submissão isolada não recebe rodadas extras por decisão ad hoc."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "6. Ranking"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sequência de desempate:"
+        },
+        {
+          "type": "code",
+          "text": "1. time_with_equivalence_margin\n2. precision_score\n3. received_at\n4. submission_id"
+        },
+        {
+          "type": "code",
+          "text": "precision_score = max(\n  E_abs_inf / ABS_TOL,\n  E_rel_inf / REL_TOL,\n  E_rms / RMS_TOL\n)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Tempos agrupados como temporalmente equivalentes pelo protocolo não são ordenados pelo pequeno delta bruto entre eles; aplica-se a sequência acima."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "7. Runtime e limites"
+        },
+        {
+          "type": "code",
+          "text": "GNU Octave = 11.3.0\nOctave Forge packages = nenhum (allowlist vazia)\nnetwork = disabled\nCPU = 1.0 CPU-equivalente agregado\nmemory = 512 MiB\ntimeout = 60 s"
+        },
+        {
+          "type": "paragraph",
+          "text": "O `timeout` de 60 s é um watchdog operacional de segurança; ele não é a métrica de ranking. A ordenação competitiva usa `solution_elapsed_seconds` conforme o protocolo de benchmark."
+        },
+        {
+          "type": "paragraph",
+          "text": "A cota de CPU é agregada; não presuma thread/core físico fixo."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "8. Submissão"
+        },
+        {
+          "type": "paragraph",
+          "text": "Exatamente:"
+        },
+        {
+          "type": "code",
+          "text": "solution.m\nreport.json"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sem ZIP, sem pasta e sem terceiro arquivo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ambos:"
+        },
+        {
+          "type": "code",
+          "text": "encoding = UTF-8 válido\nBOM = proibido\nline endings = LF ou CRLF"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "9. `report.json`"
+        },
+        {
+          "type": "paragraph",
+          "text": "Exatamente 9 chaves:"
+        },
+        {
+          "type": "code",
+          "text": "{\n  \"schema_version\": 1,\n  \"participant\": \"handle-publico\",\n  \"competence_profile\": [],\n  \"participant_materials_consulted\": [],\n  \"algorithm_chosen\": [],\n  \"development_observations\": [],\n  \"self_tests_performed\": [],\n  \"known_concerns_perceived_by_participant\": [],\n  \"solution_sha256\": \"<64 hexadecimal digits>\"\n}"
+        },
+        {
+          "type": "paragraph",
+          "text": "Regras:"
+        },
+        {
+          "type": "unordered-list",
+          "items": [
+            "`participant` é handle público não vazio, não identidade legal;",
+            "os seis campos de declaração são arrays de strings;",
+            "todas as chaves são obrigatórias;",
+            "chaves extras são rejeitadas;",
+            "chaves duplicadas são rejeitadas;",
+            "`solution_sha256` aceita hexadecimal maiúsculo ou minúsculo e deve ser exatamente o SHA-256 dos bytes de `solution.m`;",
+            "o intake recalcula o hash; mismatch implica `INVALID_SUBMISSION`;",
+            "para submissões classificadas, o SHA-256 da solução é projetado no ranking público como compromisso de integridade, permitindo que terceiros confiram que o arquivo auditado corresponde ao arquivo recebido e avaliado;",
+            "o texto do relatório não recebe pontuação nem entra no ranking."
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "10. IA, ferramentas e autoria na participação de teste"
+        },
+        {
+          "type": "paragraph",
+          "text": "IA/LLM é permitida para raciocínio matemático, programação, debugging e otimização. O participante pode fornecer esta especificação ao seu assistente. Não são exigidos prompts, logs ou históricos de chat nesta participação de teste."
+        },
+        {
+          "type": "paragraph",
+          "text": "O participante permanece responsável por conformidade, atribuição/licenciamento de materiais usados e pelos arquivos finais. IA não autoriza acesso a dataset/gabarito oculto, dados privados da infraestrutura de avaliação ou submissões de terceiros."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "11. Exemplo"
+        },
+        {
+          "type": "paragraph",
+          "text": "`templates/example-submission/` demonstra apenas contrato de arquivos/interface. A série direta usada no exemplo é deliberadamente didática e **pode ser numericamente inadequada no domínio desta participação; não há garantia de passar accuracy e ela não deve ser interpretada como estratégia competitiva recomendada**."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "12. Informação deliberadamente não fornecida"
+        },
+        {
+          "type": "paragraph",
+          "text": "Esta especificação não expõe:"
+        },
+        {
+          "type": "unordered-list",
+          "items": [
+            "seed competitiva;",
+            "valores da referência/gabarito;",
+            "arquivos privados da infraestrutura de avaliação/PC-bench;",
+            "submissões de terceiros;"
+          ]
+        }
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "name": "solution.m",
+      "sha256": "1500b0f7428efcf487d280edeccd311c57136f27ec715ffeb090cad4634c6531",
+      "download": "data/argus/previews/h1/example-submission/pt/solution.m",
+      "localized": {
+        "pt": {
+          "sha256": "1500b0f7428efcf487d280edeccd311c57136f27ec715ffeb090cad4634c6531",
+          "download": "data/argus/previews/h1/example-submission/pt/solution.m"
+        },
+        "es": {
+          "sha256": "37ed50b34b3edc501848e5e2081f77335c6e17fbcb971e4fd93e56f9eb0714ad",
+          "download": "data/argus/previews/h1/example-submission/es/solution.m"
+        }
+      }
+    },
+    {
+      "name": "report.json",
+      "sha256": "dbc578b66f1590a3410cd23b19db302691e20b98318fb88f8b18461b2a1fb0fe",
+      "download": "data/argus/previews/h1/example-submission/pt/report.json",
+      "localized": {
+        "pt": {
+          "sha256": "dbc578b66f1590a3410cd23b19db302691e20b98318fb88f8b18461b2a1fb0fe",
+          "download": "data/argus/previews/h1/example-submission/pt/report.json"
+        },
+        "es": {
+          "sha256": "542b29ffeb0859de19d44b77089c2304d02424129df7aca6d35ee16fbfa51967",
+          "download": "data/argus/previews/h1/example-submission/es/report.json"
+        }
+      }
+    }
+  ],
+  "ai_assistance": "permitted",
+  "notice": "Participacao informal de teste, sem taxa ou premio, destinada a testar documentacao, envio e integracao com a infraestrutura de avaliacao."
+}

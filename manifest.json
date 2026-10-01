@@ -1,0 +1,25 @@
+{
+  "name": "Argus Kepheus",
+  "short_name": "A|K",
+  "description": "Portal de competições acadêmicas organizadas pela Editora Argus Kepheus, com foco em programação científica e otimização numérica.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "lang": "pt-BR",
+  "theme_color": "#075284",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "images/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

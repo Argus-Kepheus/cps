@@ -1,0 +1,753 @@
+{
+  "site": {
+    "title": "Argus Kepheus — Competiciones Computacionales",
+    "description": "Portal público de competiciones académicas organizadas por la Editora Argus Kepheus, centradas en computación científica reproducible.",
+    "ogTitle": "Argus Kepheus — Competiciones Computacionales",
+    "ogDescription": "Desafíos reproducibles de computación científica, precisión numérica y rendimiento."
+  },
+  "ui": {
+    "loading": "Cargando...",
+    "error": "Error",
+    "componentLoadError": "Error al cargar el componente.",
+    "backToHome": "Volver a la página principal",
+    "retry": "Intentar nuevamente",
+    "close": "Cerrar",
+    "yes": "Sí",
+    "no": "No",
+    "accept": "Aceptar",
+    "decline": "Rechazar",
+    "success": "Éxito"
+  },
+  "nav": {
+    "home": "Inicio",
+    "contato": "Contacto",
+    "mittag_leffler": "Desafio Mittag-Leffler Uniparamétrica",
+    "transparency": "Transparência Institucional",
+    "prize_pool": "Inscrição e Premiação",
+    "challenges": "Desafíos"
+  },
+  "home": {
+    "pageTitle": "Inicio",
+    "title": "Competiciones computacionales",
+    "kicker": "Computación científica · precisión · rendimiento",
+    "intro": "Portal público de una plataforma de competiciones académicas organizada por la [Editora Argus Kepheus](https://www.arguskepheus.com.br/#home), orientada a desafíos reproducibles de computación científica. El sitio publica documentación, recibe los archivos de la participación de prueba y realiza únicamente comprobaciones locales preliminares; la evaluación autoritativa se realiza en una infraestructura separada.",
+    "cta": {
+      "challenges": "Explorar desafíos",
+      "mittagLeffler": "Abrir Mittag-Leffler"
+    },
+    "highlights": {
+      "title": "Cómo funciona",
+      "item1": {
+        "title": "Problemas científicos",
+        "description": "Cada desafío parte de una especificación matemática y computacional explícita, con dominio, interfaz y criterios verificables."
+      },
+      "item2": {
+        "title": "Evaluación reproducible",
+        "description": "Los criterios y protocolos se publican de forma versionada. La ejecución autoritativa de precisión, rendimiento y clasificación se realiza fuera del sitio web, en una infraestructura de evaluación controlada."
+      },
+      "item3": {
+        "title": "Participación humana con IA",
+        "description": "Las ediciones pueden permitir asistencia de LLM y otras herramientas; el participante sigue siendo responsable de los archivos enviados."
+      }
+    },
+    "description": "Competiciones académicas organizadas por la Editora Argus Kepheus, centradas en computación científica, precisión numérica y rendimiento.",
+    "status": "Estado actual: hay una participación informal de prueba en prepublicación para el desafío Mittag-Leffler. No hay ninguna edición oficial publicada ni con inscripciones abiertas en este portal."
+  },
+  "contato": {
+    "pageTitle": "Contacto",
+    "title": "Contacto",
+    "description": "Canal general para consultas sobre el proyecto y sus competiciones. Las participaciones de prueba no se envían desde esta página.",
+    "sections": {
+      "message": "Enviar un mensaje"
+    },
+    "form": {
+      "title": "Formulario de Contacto",
+      "name": "Nombre",
+      "email": "Email",
+      "subject": "Asunto",
+      "message": "Mensaje",
+      "send": "Enviar Mensaje",
+      "privacyPolicy": "He leído y acepto la <a href='#privacyPolicy'>política de privacidad</a> y doy mi consentimiento para el procesamiento de mis datos personales."
+    },
+    "submissionNote": "Para una participación de prueba, utilice el formulario específico del desafío Mittag-Leffler.",
+    "submissionLink": "Abrir envío de prueba"
+  },
+  "footer": {
+    "copyright": "© 2026 Editora Argus Kepheus — Todos los derechos reservados.",
+    "contact": {
+      "title": "Contacto",
+      "email": "Email: "
+    }
+  },
+  "error": {
+    "pageTitle": "Error",
+    "notFound": {
+      "title": "Página no encontrada",
+      "message": "La página que estás buscando no existe o ha sido movida.",
+      "backButton": "Volver a la página de inicio"
+    },
+    "generic": {
+      "title": "Ocurrió un error",
+      "message": "Lo sentimos, ocurrió un error al cargar el contenido. Por favor, inténtalo nuevamente.",
+      "backButton": "Volver a la página de inicio"
+    },
+    "connection": {
+      "title": "Error de conexión",
+      "message": "No se pudo conectar al servidor. Verifica tu conexión a internet.",
+      "retryButton": "Intentar nuevamente"
+    },
+    "appInitFailed": "Error al inicializar la aplicación. Por favor, recarga la página.",
+    "langChangeFailed": "Error al cambiar el idioma. Por favor, inténtalo nuevamente.",
+    "pageLoadFailed": "Error al cargar la página. Por favor, inténtalo nuevamente.",
+    "description": "Página de error mostrada cuando el contenido no puede cargarse o la ruta solicitada no está disponible."
+  },
+  "form": {
+    "validation": {
+      "required": "Por favor, completa este campo",
+      "invalidEmail": "Por favor, introduce una dirección de correo electrónico válida",
+      "email": "Por favor, introduce una dirección de correo electrónico válida",
+      "minLength": "Este campo debe tener al menos {{min}} caracteres",
+      "maxLength": "Este campo debe tener como máximo {{max}} caracteres",
+      "pattern": "Por favor, introduce un formato válido",
+      "number": "Por favor, introduce un número válido",
+      "url": "Por favor, introduce una URL válida",
+      "match": "Los campos no coinciden"
+    },
+    "status": {
+      "sending": "Enviando mensaje...",
+      "success": "¡Mensaje enviado con éxito!",
+      "error": "Error al enviar el mensaje. Por favor, inténtalo de nuevo."
+    },
+    "placeholders": {
+      "name": "Escribe tu nombre",
+      "email": "Escribe tu dirección de correo electrónico",
+      "subject": "Escribe el asunto",
+      "message": "Escribe tu mensaje aquí",
+      "phone": "Escribe tu número de teléfono"
+    }
+  },
+  "aria": {
+    "languageSelector": "Seleccionar idioma",
+    "menuToggle": "Alternar menú de navegación",
+    "closeMenu": "Cerrar menú",
+    "nextSlide": "Siguiente slide",
+    "previousSlide": "Slide anterior",
+    "loadMore": "Cargar más contenido",
+    "search": "Buscar",
+    "searchButton": "Botón de búsqueda",
+    "closeButton": "Botón de cerrar",
+    "expandButton": "Botón de expandir",
+    "collapseButton": "Botón de contraer",
+    "socialLinks": "Enlaces de redes sociales",
+    "contactForm": "Formulario de contacto",
+    "requiredField": "Campo obligatorio",
+    "navigation": "Navegación principal",
+    "skipToContent": "Saltar al contenido",
+    "darkModeToggle": "Alternar modo oscuro",
+    "backToTop": "Volver al inicio de la página",
+    "openMenu": "Abrir menú",
+    "paletteSelector": "Alternar paleta de colores",
+    "paletteSelectorWithCurrent": "Seleccionar paleta de colores: {{palette}}",
+    "homeLink": "Ir a la página de inicio",
+    "paletteSwitchTo": "Cambiar al modo {{palette}}"
+  },
+  "buttons": {
+    "readMore": "Leer más",
+    "viewAll": "Ver todos",
+    "download": "Descargar",
+    "submit": "Enviar",
+    "cancel": "Cancelar",
+    "close": "Cerrar",
+    "back": "Volver",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "save": "Guardar",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "confirm": "Confirmar",
+    "apply": "Aplicar",
+    "filter": "Filtrar",
+    "clear": "Limpiar",
+    "search": "Buscar",
+    "share": "Compartir",
+    "print": "Imprimir",
+    "contactMe": "Ponte en contacto",
+    "backToTop": "Volver al Inicio"
+  },
+  "formats": {
+    "date": {
+      "short": "DD/MM/AAAA",
+      "long": "D [de] MMMM [de] AAAA",
+      "monthYear": "MMMM [de] AAAA",
+      "time": "HH:mm",
+      "dateTime": "D [de] MMMM [de] AAAA [a las] HH:mm",
+      "relative": {
+        "today": "Hoy",
+        "yesterday": "Ayer",
+        "tomorrow": "Mañana",
+        "daysAgo": "hace {{days}} días",
+        "inDays": "en {{days}} días"
+      }
+    },
+    "number": {
+      "decimal": ",",
+      "thousands": ".",
+      "percent": "{value}%",
+      "currency": "$ {value}"
+    }
+  },
+  "privacyPolicy": {
+    "pageTitle": "Política de Privacidad",
+    "description": "Política de privacidad que explica datos del formulario de contacto, preferencias locales de idioma y paleta, enlaces externos y control del usuario sobre datos guardados en el navegador."
+  },
+  "privacy": {
+    "title": "Política de Privacidad",
+    "description": "Esta política describe qué datos utiliza este sitio para contacto, preferencias locales y enlaces externos.",
+    "consent": "He leído y acepto la",
+    "lastUpdated": "Última actualización",
+    "lastUpdatedDate": "29 de septiembre de 2026",
+    "sections": {
+      "introduction": {
+        "title": "Introducción",
+        "content": "Esta política resume los flujos de datos implementados en este sitio estático. Debe leerse junto con el inventario técnico en docs/PRIVACY_DATA_FLOW.md."
+      },
+      "dataCollection": {
+        "title": "Datos tratados",
+        "content": "El sitio evita la recopilación innecesaria. Los principales datos involucrados son los enviados voluntariamente mediante el formulario de contacto y las preferencias guardadas localmente en el navegador.",
+        "personalData": {
+          "title": "Formulario de contacto",
+          "content": "El sitio ofrece un formulario general de mensajes que envía nombre, correo electrónico, asunto, mensaje y confirmación de consentimiento a Formspree. La participación de prueba tiene un formulario separado que envía nombre, correo electrónico, una nota opcional, los archivos `solution.m` y `report.json`, identificadores fijos de la participación/desafío y confirmación de consentimiento a Forminit. Antes del envío, el navegador ejecuta un preflight técnico local."
+        },
+        "usage": {
+          "title": "Preferencias locales",
+          "content": "El sitio usa localStorage para recordar el idioma seleccionado y la paleta visual elegida. Estos valores permanecen en el navegador del usuario y pueden eliminarse al borrar los datos del sitio."
+        }
+      },
+      "lgpd": {
+        "title": "Ley General de Protección de Datos de Brasil (LGPD)",
+        "content": "Cuando sea aplicable, el tratamiento de datos personales debe observar la LGPD. Esta página describe los datos conocidos y mantiene las dudas operativas marcadas en el inventario técnico hasta revisar la cuenta del servicio externo.",
+        "controller": {
+          "title": "Controlador",
+          "content": "El responsable del sitio decide la finalidad del formulario de contacto y recibe los mensajes enviados."
+        },
+        "operator": {
+          "title": "Encargado del tratamiento",
+          "content": "Formspree y Forminit actúan como servicios externos: el primero entrega mensajes generales de contacto y el segundo recibe envíos de prueba. Las configuraciones de retención y eliminación aún deben verificarse en las cuentas correspondientes."
+        }
+      },
+      "cookies": {
+        "title": "Cookies y almacenamiento local",
+        "content": "El código de primera parte de este sitio no define cookies. Las preferencias de idioma y paleta se guardan en localStorage, no en cookies."
+      },
+      "thirdParty": {
+        "title": "Servicios de terceros",
+        "content": "El sitio no carga Google Analytics, reCAPTCHA, píxeles publicitarios ni analítica integrada. Las solicitudes a Formspree y Forminit solo ocurren después de que el usuario envía explícitamente un formulario válido."
+      },
+      "rights": {
+        "title": "Sus derechos",
+        "content": "Puede solicitar acceso, corrección, eliminación o aclaraciones sobre datos personales enviados mediante el formulario usando el correo público indicado en este sitio. Las preferencias locales también pueden eliminarse directamente en el navegador."
+      },
+      "changes": {
+        "title": "Cambios en la política",
+        "content": "Esta política puede actualizarse cuando cambien el sitio, el formulario de contacto o los servicios externos. La fecha anterior indica la última revisión registrada."
+      },
+      "contact": {
+        "title": "Contacto",
+        "content": "Para preguntas sobre esta política o sobre datos enviados mediante el formulario, use la página de contacto del sitio."
+      }
+    }
+  },
+  "palettes": {
+    "light": "Claro",
+    "dark": "Oscuro"
+  },
+  "controls": {
+    "readMore": "Leer más",
+    "readLess": "Leer menos",
+    "showMore": "Ver más",
+    "showLess": "Ver menos",
+    "filterByYear": "Filtrar por año:",
+    "filterByCategory": "Filtrar por área:",
+    "filterByType": "Filtrar por tipo:",
+    "all": "Todos",
+    "previousImage": "Imagen anterior",
+    "nextImage": "Imagen siguiente"
+  },
+  "pages": {
+    "home": {
+      "title": "Competiciones académicas de la Editora Argus Kepheus",
+      "subtitle": "Computación científica, precisión y rendimiento reproducible"
+    },
+    "mittag_leffler": {
+      "title": "Desafio Mittag-Leffler Uniparamétrica",
+      "rules": "Regulamento do Desafio",
+      "leaderboard": "Leaderboard"
+    },
+    "transparency": {
+      "title": "Transparência Institucional",
+      "ldb": "Base Legal: LDB 9394/96",
+      "lgpd": "Privacidade de Dados (LGPD)"
+    },
+    "prize_pool": {
+      "title": "Inscrições e Premiação",
+      "checkout": "Pagar Inscrição"
+    }
+  },
+  "challenges": {
+    "pageTitle": "Desafíos",
+    "title": "Desafíos",
+    "description": "Desafíos científico-técnicos organizados por la Editora Argus Kepheus.",
+    "intro": "Explore los desafíos actualmente publicados en este portal. La existencia de un desafío público no significa que haya una edición oficial abierta.",
+    "viewChallenge": "Ver desafío",
+    "empty": "No hay desafíos públicos disponibles.",
+    "variants": "Variantes",
+    "categories": "Categorías",
+    "editions": "Ediciones",
+    "noVariants": "Este desafío no tiene variantes publicadas.",
+    "noCategories": "Este desafío no tiene categorías publicadas.",
+    "noPublicEditions": "Aún no hay ninguna edición oficial publicada de este desafío.",
+    "editionStatus": "Estado",
+    "backToChallenges": "Volver a los desafíos",
+    "notFound": "No se encontró el desafío solicitado.",
+    "viewEdition": "Ver edición",
+    "available": "Desafío público",
+    "mlfName": "Función de Mittag-Leffler uniparamétrica",
+    "mlfSummary": "Desarrollo de algoritmos para evaluar numéricamente la función de Mittag-Leffler de un parámetro, con precisión, estabilidad y rendimiento reproducible.",
+    "mlfDetail": "El desafío investiga métodos numéricos para calcular la función de Mittag-Leffler uniparamétrica con precisión y estabilidad en regímenes computacionalmente exigentes. Las soluciones deben combinar una formulación matemática adecuada, control de errores de punto flotante, uso eficiente de memoria y tiempo de ejecución reproducible. El rendimiento solo se compara después de que la solución cumple los criterios de precisión definidos para la edición; los parámetros, el dominio y el entorno computacional pueden variar entre ediciones.",
+    "competitionSummary": "Este desafío define un problema científico-computacional duradero. Cada realización concreta es una edición, con reglas y parámetros propios. Cuando se publique una edición oficial, su convocatoria informará el calendario, los criterios de participación y las eventuales condiciones económicas. La participación de prueba actual es informal, sin cuota ni premio.",
+    "languageLabel": "Lenguaje de programación",
+    "variantName": "Uniparamétrica",
+    "variantDescription": "Un único parámetro alpha.",
+    "categoryScopeNote": "Las categorías anteriores describen posibilidades del desafío. El lenguaje y el entorno exigidos se definen en cada edición o participación específica."
+  },
+  "editions": {
+    "breadcrumb": "Navegación de la edición",
+    "pending": "Por definir",
+    "notApplicable": "No aplica",
+    "notFound": "No se encontró la edición solicitada.",
+    "call": "Convocatoria",
+    "noCall": "La convocatoria pública aún no está disponible.",
+    "rules": "Reglamento y políticas",
+    "noRules": "No hay reglamentos públicos disponibles.",
+    "schedule": "Cronograma",
+    "callPublication": "Publicación de la convocatoria",
+    "registrationOpens": "Apertura de inscripciones",
+    "registrationCloses": "Cierre de inscripciones",
+    "submissionOpens": "Apertura de envíos",
+    "submissionCloses": "Cierre de envíos",
+    "resultsPlanned": "Publicación prevista de resultados",
+    "registrationAndAward": "Inscripción y premio",
+    "registrationFee": "Tasa de inscripción",
+    "minimumParticipants": "Mínimo de participantes confirmados",
+    "award": "Premio bruto",
+    "awardCount": "Cantidad de premios",
+    "submission": "Envío",
+    "category": "Categoría",
+    "participation": "Participación",
+    "presence": "Modalidad",
+    "timing": "Dinámica temporal",
+    "results": "Resultados",
+    "participants": "Participantes",
+    "ranking": "Clasificación",
+    "noParticipants": "Aún no hay participantes publicados.",
+    "noRanking": "La clasificación homologada aún no está disponible.",
+    "position": "Posición",
+    "participant": "Participante",
+    "time": "Tiempo",
+    "certificates": "Certificados",
+    "certificateVerificationEnabled": "La verificación pública de certificados estará disponible cuando se emitan certificados.",
+    "certificateVerificationUnavailable": "La verificación pública de certificados no está habilitada para esta edición.",
+    "values": {
+      "participation": {
+        "individual": "Individual",
+        "team": "Equipo",
+        "mixed": "Mixta"
+      },
+      "presence": {
+        "remote": "Remota",
+        "in-person": "Presencial",
+        "hybrid": "Híbrida"
+      },
+      "timing": {
+        "asynchronous": "Asíncrona",
+        "synchronous": "Síncrona",
+        "mixed": "Mixta"
+      },
+      "status": {
+        "draft": "Borrador",
+        "planning": "Planificación",
+        "ready": "Lista",
+        "published": "Publicada",
+        "registration-open": "Inscripciones abiertas",
+        "registration-closed": "Inscripciones cerradas",
+        "submission-open": "Envíos abiertos",
+        "submission-closed": "Envíos cerrados",
+        "evaluation": "Evaluación",
+        "homologation": "Homologación",
+        "completed": "Finalizada",
+        "archived": "Archivada",
+        "cancelled": "Cancelada"
+      }
+    },
+    "solutionHash": "SHA-256 de la solución"
+  },
+  "participation": {
+    "testTitle": "Participación de prueba",
+    "testBadge": "ENVÍO DE PRUEBA · PREPUBLICACIÓN",
+    "testDescription": "Participación informal para probar la documentación, el flujo de envío y la integración con la infraestructura de evaluación. No es una edición oficial, no tiene cuota ni ofrece premio.",
+    "openTest": "Abrir participación de prueba",
+    "submit": "Enviar solución de prueba",
+    "filesIntro": "Este canal es exclusivo de la participación de prueba. Envíe exactamente los dos archivos exigidos, sin `ZIP`:",
+    "preflightHint": "Antes del envío, el navegador realiza únicamente una comprobación preliminar de los archivos. No ejecuta la solución, no mide precisión ni rendimiento y no sustituye la validación autoritativa realizada fuera de este sitio web.",
+    "name": "Nombre del participante",
+    "email": "Correo electrónico",
+    "note": "Observación opcional",
+    "notePlaceholder": "Use este campo para información administrativa; no es necesario explicar el algoritmo.",
+    "solutionHint": "Archivo `Octave` en `UTF-8` sin `BOM`, con salto de línea final.",
+    "reportHint": "Informe `JSON` según el contrato; el `hash` debe corresponder a los bytes de",
+    "selectFiles": "Seleccione los dos archivos para ejecutar la validación local.",
+    "consent": "He leído y acepto la",
+    "back": "Volver al desafío",
+    "banner": "PARTICIPACIÓN DE PRUEBA · PREPUBLICACIÓN",
+    "bannerLabel": "Aviso de participación de prueba en prepublicación",
+    "intro": "Documentación para la participación de prueba de este desafío. Este sitio orienta y recibe los archivos; la evaluación autoritativa es una etapa separada. Se permite asistencia de IA/LLM y el participante sigue siendo responsable de los archivos entregados.",
+    "summaryTitle": "Resumen de esta participación",
+    "summaryItems": [
+      {
+        "label": "Parámetro",
+        "value": "alpha = 0,2"
+      },
+      {
+        "label": "Dominio",
+        "value": "z real negativo; 3 <= |z| <= 10"
+      },
+      {
+        "label": "Carga de trabajo",
+        "value": "1.000 x 1.000 (1.000.000 de puntos)"
+      },
+      {
+        "label": "Runtime",
+        "value": "GNU Octave 11.3.0, sin paquetes Octave Forge"
+      },
+      {
+        "label": "CPU",
+        "value": "1,0 CPU-equivalente agregado"
+      },
+      {
+        "label": "Memoria",
+        "value": "512 MiB"
+      },
+      {
+        "label": "Timeout",
+        "value": "60 s por ejecución"
+      }
+    ],
+    "flowTitle": "Flujo rápido",
+    "flowSteps": [
+      "Lea los requisitos y el contrato de los dos archivos.",
+      "Use los ejemplos de `solution.m` y `report.json` disponibles en las secciones 9 y 10.",
+      "Prepare `solution.m` y `report.json`.",
+      "Compruebe el `SHA-256` y ejecute la verificación local.",
+      "Revise la lista de comprobación y envíe los dos archivos."
+    ],
+    "guideNavTitle": "Navegación de la guía",
+    "guideNavLabel": "Accesos directos a secciones de la guía del participante",
+    "guideNav": [
+      {
+        "label": "Objetivo",
+        "target": "guide-1"
+      },
+      {
+        "label": "Entrega",
+        "target": "guide-2"
+      },
+      {
+        "label": "Entorno",
+        "target": "guide-5"
+      },
+      {
+        "label": "Precisión",
+        "target": "guide-7"
+      },
+      {
+        "label": "`solution.m`",
+        "target": "guide-9"
+      },
+      {
+        "label": "`report.json`",
+        "target": "guide-10"
+      },
+      {
+        "label": "Lista de comprobación",
+        "target": "guide-12"
+      },
+      {
+        "label": "Envío",
+        "target": "h1-submit-title"
+      }
+    ],
+    "validationBoundaryTitle": "El sitio web y la evaluación autoritativa son etapas separadas",
+    "localValidationTitle": "1. Comprobación preliminar en este sitio web",
+    "localValidationText": "Comprueba nombres de archivos, límite de tamaño, `UTF-8`/`BOM`/salto de línea final, claves de `report.json`, presencia de la interfaz `solution(...)` y correspondencia `SHA-256`. No ejecuta la solución ni mide precisión o rendimiento.",
+    "judgeValidationTitle": "2. Validación autoritativa fuera del sitio web",
+    "judgeValidationText": "Después de la recepción, los archivos se remiten al sistema de evaluación separado, que aplica la validación autoritativa y, para envíos válidos, las etapas de precisión y rendimiento descritas en esta guía. Superar el preflight local no significa que el envío haya sido aprobado o evaluado.",
+    "description": "Documentación y envío de prueba en prepublicación para el desafío Mittag-Leffler.",
+    "identityError": "Complete nombre, correo electrónico y consentimiento antes del envío.",
+    "preflightError": "La comprobación local encontró problemas. Corrija los archivos antes del envío.",
+    "unavailable": "No se pudo completar la comprobación local. Seleccione los archivos de nuevo.",
+    "sending": "Enviando archivos de prueba…",
+    "success": "Los archivos de la participación de prueba se enviaron al canal de recepción. Esto no significa que la validación o la evaluación hayan finalizado; conserve una copia local exacta de los dos archivos.",
+    "error": "No se pudo enviar la entrega de prueba. Inténtelo de nuevo o use el contacto del proyecto.",
+    "sent": "Envío completado; seleccione archivos para una nueva comprobación.",
+    "waiting": "Esperando `solution.m` + `report.json`",
+    "and": "y",
+    "exampleLabel": "Ejemplo de envío",
+    "downloadExample": "Descargar {{file}}",
+    "exampleHash": "SHA-256 de este archivo de ejemplo"
+  },
+  "preflight": {
+    "0": "archivos",
+    "1": "nombres",
+    "2": "tamaño",
+    "3": "interfaz",
+    "4": "resultado",
+    "5": "se esperan solution.m + report.json",
+    "6": "cada archivo debe tener como máximo 1 MiB",
+    "7": "UTF-8 válido, sin BOM y con salto de línea final obligatorio",
+    "8": "claves del contrato comprobadas",
+    "9": "JSON o claves del contrato no válidos",
+    "10": "solution(...) encontrada",
+    "11": "función principal solution(...) no encontrada",
+    "12": "COINCIDE",
+    "13": "NO COINCIDE",
+    "14": "LISTO PARA ENVIAR",
+    "15": "CORRIJA ANTES DEL ENVÍO"
+  },
+  "participantGuide": {
+    "title": "Guía del participante",
+    "sections": [
+      {
+        "title": "1. Objetivo",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Implemente en `GNU Octave` la **función de Mittag-Leffler uniparamétrica**: un único parámetro, `alpha`, define la función evaluada en cada valor de `z`."
+          },
+          {
+            "type": "code",
+            "text": "E_alpha(z) = sum_{k=0}^infinity z^k / Gamma(alpha*k + 1)"
+          },
+          {
+            "type": "paragraph",
+            "text": "En esta participación de prueba, `alpha = 0,2`; `z` es real y negativo, con `3 <= |z| <= 10`. La entrada es una matriz `1.000 x 1.000`, con 1.000.000 de puntos. La salida `E` debe contener el valor de la función en cada posición correspondiente."
+          },
+          {
+            "type": "paragraph",
+            "text": "La participación es individual. La formación académica no es un criterio de evaluación. Todas las instrucciones necesarias para esta etapa están en este sitio web."
+          }
+        ]
+      },
+      {
+        "title": "2. Qué entregar",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Envíe exactamente **dos archivos**, `solution.m` y `report.json`, mediante el formulario al final de esta página. No envíe `ZIP`, `PDF`, carpetas, ejecutables ni un tercer archivo."
+          },
+          {
+            "type": "paragraph",
+            "text": "Use `UTF-8` sin `BOM`, saltos de línea LF o CRLF y un salto de línea al final de cada archivo."
+          }
+        ]
+      },
+      {
+        "title": "3. Asistencia de IA",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Se permite usar IA y modelos de lenguaje para desarrollar la solución. No es necesario entregar prompts, conversaciones ni registros. El participante sigue siendo responsable de las matemáticas, el código, las licencias y la conformidad de la entrega."
+          }
+        ]
+      },
+      {
+        "title": "4. Cómo funciona la evaluación",
+        "blocks": [
+          {
+            "type": "ordered-list",
+            "items": [
+              "Recepción y validación de los archivos, la interfaz y el contrato de entrega.",
+              "Comprobación de la salida: los valores `NaN` o `Inf` provocan un fallo antes de calcular las métricas de precisión.",
+              "Evaluación de precisión: las tres métricas deben cumplir simultáneamente las tolerancias.",
+              "Medición del rendimiento únicamente para las soluciones que superaron la evaluación de precisión.",
+              "Clasificación por el menor tiempo válido, considerando la equivalencia temporal y los criterios de desempate."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "5. Entorno",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "La solución debe ejecutarse en [`GNU Octave 11.3.0`](https://www.octave.org/news/release/2026/06/01/octave-11.3.0-released.html), utilizando únicamente el núcleo, sin paquetes `Octave Forge` y sin `red`."
+          },
+          {
+            "type": "unordered-list",
+            "items": [
+              "CPU: cuota agregada de 1,0 CPU-equivalente; no implica reservar un núcleo físico específico.",
+              "Memoria: 512 MiB.",
+              "Límite de ejecución: 60 segundos."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Estos recursos se delimitan para centrar la competición en la optimización algorítmica: elegir una formulación estable, reducir operaciones y organizar bien el cálculo. El objetivo es evitar que la mejora dependa del paralelismo o de una gran cantidad de memoria."
+          },
+          {
+            "type": "paragraph",
+            "text": "El límite de 60 s es un watchdog operativo de seguridad y no el tiempo utilizado para ordenar la clasificación. La medición competitiva considera `solution_elapsed_seconds` según el protocolo; pueden existir costes de inicialización e infraestructura fuera de esa ventana."
+          }
+        ]
+      },
+      {
+        "title": "6. Tiempo competitivo",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Se mide el tiempo transcurrido de una invocación aislada del programa del participante. No hay calentamiento previo: iniciar `Octave` y cargar el propio código también forma parte del coste de la solución."
+          },
+          {
+            "type": "unordered-list",
+            "items": [
+              "Incluye: creación del proceso `Octave`, inicialización del intérprete, lectura y análisis de `solution.m`, llamada a la función, asignaciones de memoria y operaciones, además del transporte binario dentro del intervalo medido.",
+              "Excluye: preparación externa del contenedor y orquestación, lectura del `CSV` de entrada por el programa controlador, serialización final en `CSV` y cálculo de las métricas de precisión."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Se empieza con 5 rondas intercaladas entre participantes; se usa el **menor tiempo válido**, no la media. El protocolo puede ampliar la medición en bloques de 5 rondas, hasta 20, de forma global: no se concede una ronda adicional aislada a un participante."
+          },
+          {
+            "type": "paragraph",
+            "text": "El margen de equivalencia temporal es `0,018617153 s`. Este valor fue calibrado exclusivamente para el PC juez y para el protocolo de medición definido, de modo que la cantidad de rondas y su orden intercalado produzcan una muestra estadísticamente representativa de las variaciones de tiempo observadas en ese equipo. Por ello, pequeñas diferencias en una ejecución local no reproducen necesariamente la calibración del juez y no garantizan una mejor posición: la solución también debe satisfacer todas las tolerancias de precisión y, dentro de la equivalencia temporal, la precisión interviene en el desempate según se describe en la sección siguiente."
+          }
+        ]
+      },
+      {
+        "title": "7. Precisión: cómo interpretar los errores",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Para cada punto de la matriz, `r_i` es el **valor de referencia** de la función que el juez utiliza para comparar; `y_i` es el **valor calculado por su algoritmo** en ese mismo punto. El índice identifica la posición comparada. Por ejemplo, si la referencia vale 0,5 y la salida vale 0,5001, el error absoluto es 0,0001."
+          },
+          {
+            "type": "paragraph",
+            "text": "El error absoluto mide la distancia entre ambos valores. El error relativo compara esa distancia con la magnitud de la referencia; `tau` evita dividir por un valor demasiado pequeño. El participante no tiene que enviar los valores de referencia."
+          },
+          {
+            "type": "code",
+            "text": "abs_error_i = |y_i - r_i|\nrel_error_i = abs_error_i / max(|r_i|, tau)\nE_abs_inf   = max(abs_error_i)\nE_rel_inf   = max(rel_error_i)\nE_rms       = sqrt(mean(rel_error_i^2))"
+          },
+          {
+            "type": "paragraph",
+            "text": "La primera métrica es el mayor error absoluto; la segunda, el mayor error relativo; la tercera es la raíz de la media de los cuadrados de los errores relativos, que resume el comportamiento en el conjunto de puntos."
+          },
+          {
+            "type": "code",
+            "text": "tau = 1e-6\nABS_TOL = 1e-12\nREL_TOL = 1e-11\nRMS_TOL = 1e-12"
+          },
+          {
+            "type": "paragraph",
+            "text": "Se deben cumplir simultáneamente `E_abs_inf <= ABS_TOL`, `E_rel_inf <= REL_TOL` y `E_rms <= RMS_TOL`. Una buena media no compensa un punto que supere alguno de los límites máximos."
+          }
+        ]
+      },
+      {
+        "title": "8. Clasificación y equivalencia temporal",
+        "blocks": [
+          {
+            "type": "ordered-list",
+            "items": [
+              "Los elementos siguientes son **criterios de desempate** aplicados únicamente entre soluciones que pertenecen al mismo grupo de equivalencia temporal.",
+              "Primero se prefiere el menor `precision_score`: el peor error normalizado por las tolerancias correspondientes.",
+              "Si el empate continúa, se utiliza el instante autoritativo de recepción, `received_at`, del más antiguo al más reciente. En la práctica, entre envíos que siguen empatados en tiempo y precisión, tiene preferencia el que fue recibido primero.",
+              "Solo si tiempo, precisión y `received_at` siguen siendo idénticos se utiliza `submission_id` como desempate técnico residual: se ordena primero el identificador lexicográficamente menor. Este identificador lo genera el sistema, no representa quién envió primero y no sustituye el criterio `received_at`."
+            ]
+          },
+          {
+            "type": "code",
+            "text": "precision_score = max(E_abs_inf/ABS_TOL, E_rel_inf/REL_TOL, E_rms/RMS_TOL)"
+          }
+        ]
+      },
+      {
+        "title": "9. Cómo escribir `solution.m`",
+        "blocks": [
+          {
+            "type": "code",
+            "text": "function E = solution(alpha, z)"
+          },
+          {
+            "type": "paragraph",
+            "text": "La primera función del archivo debe ser `solution`. Se recibe `alpha` escalar y toda la matriz `z` de una vez. Devuelva `E`, una matriz real, finita y con las mismas dimensiones que `z`. No devuelva `NaN`, `Inf` ni valores complejos."
+          },
+          {
+            "type": "paragraph",
+            "text": "Las funciones auxiliares pueden estar en el mismo archivo, después de la función principal. No delegue la ejecución en `C`, `C++`, `Fortran`, `Python`, `Assembly`, archivos `.oct`, `MEX` ni otros binarios externos, porque esta infracción de integridad se sanciona con descalificación (`DISQUALIFIED`)."
+          }
+        ]
+      },
+      {
+        "title": "10. Cómo preparar `report.json`",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Use exactamente las nueve claves del ejemplo siguiente, sin duplicados. `schema_version` debe ser 1; `participant` es un identificador público no vacío y no tiene que ser el nombre legal. Los seis campos de declaración son listas de textos. El contenido descriptivo del informe no recibe puntuación."
+          },
+          {
+            "type": "code",
+            "text": "{\n  \"schema_version\": 1,\n  \"participant\": \"su-identificador\",\n  \"competence_profile\": [],\n  \"participant_materials_consulted\": [],\n  \"algorithm_chosen\": [],\n  \"development_observations\": [],\n  \"self_tests_performed\": [],\n  \"known_concerns_perceived_by_participant\": [],\n  \"solution_sha256\": \"<SHA-256 de solution.m: 64 caracteres hexadecimales>\"\n}"
+          },
+          {
+            "type": "paragraph",
+            "text": "Finalice `solution.m`, [calcule el `SHA-256` del archivo](https://emn178.github.io/online-tools/sha256_checksum.html) y coloque los 64 caracteres hexadecimales en `solution_sha256`. En la calculadora, seleccione el archivo, use la salida hexadecimal y copie solo el `hash`. También se puede calcular en la terminal: consulte la [nota 1](#sha256-note)."
+          },
+          {
+            "type": "paragraph",
+            "text": "El `SHA-256` identifica los bytes exactos del archivo y crea una cadena de transparencia en ambos sentidos: permite comprobar que el `solution.m` recibido, evaluado y asociado al resultado es exactamente el mismo archivo enviado. No modifique `solution.m` después de calcular el hash; incluso cambiar un salto de línea exige recalcularlo. Durante la validación autoritativa, el sistema vuelve a calcular el hash y una discrepancia invalida el envío. Para los envíos clasificados, el SHA-256 de la solución se publicará en la clasificación final, de modo que cualquier persona pueda auditar la correspondencia entre el archivo y el resultado."
+          }
+        ]
+      },
+      {
+        "title": "11. Cómo usar el ejemplo",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Los ejemplos ofrecidos directamente en las secciones 9 (`solution.m`) y 10 (`report.json`) muestran la firma de la función y el formato de entrega. Son didácticos y no garantizan un rendimiento competitivo ni el cumplimiento de los límites de precisión. Úselos para comprobar el formato, no como una solución validada."
+          }
+        ]
+      },
+      {
+        "title": "12. Lista de comprobación antes del envío",
+        "blocks": [
+          {
+            "type": "checklist",
+            "items": [
+              "He preparado únicamente `solution.m` y `report.json`.",
+              "La primera función es `solution(alpha, z)`.",
+              "La salida es real, finita y tiene las mismas dimensiones que la entrada.",
+              "He usado únicamente el núcleo de `GNU Octave 11.3.0`.",
+              "Los archivos están en `UTF-8` sin `BOM` y terminan con un salto de línea.",
+              "El `JSON` contiene las nueve claves exigidas, sin duplicados.",
+              "El `hash` corresponde a los bytes finales de `solution.m`.",
+              "No he modificado el código después de calcular el `hash`."
+            ]
+          }
+        ]
+      }
+    ],
+    "hashTitle": "Nota 1 — `SHA-256` en su equipo",
+    "hashIntro": "Abra una terminal en la carpeta de `solution.m` y ejecute el comando de su sistema. Copie únicamente los 64 caracteres del `hash`, sin el nombre del archivo.",
+    "checklistHint": "Lista personal de comprobación; las marcas no se guardan ni se envían."
+  }
+}

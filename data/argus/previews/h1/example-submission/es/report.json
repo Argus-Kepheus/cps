@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "participant": "ejemplo-identificador-publico",
+  "competence_profile": [
+    "Ejemplo — describa aquí su experiencia relevante, como análisis numérico u Octave/MATLAB."
+  ],
+  "participant_materials_consulted": [
+    "Ejemplo — enumere libros, artículos o documentación consultados. Se permite una lista vacía."
+  ],
+  "algorithm_chosen": [
+    "Ejemplo — algoritmo deliberadamente no competitivo, utilizado solo para demostrar la estructura de la entrega."
+  ],
+  "development_observations": [
+    "Ejemplo — registre observaciones de desarrollo. Se permite una lista vacía."
+  ],
+  "self_tests_performed": [
+    "Ejemplo — indique pruebas propias, como comparaciones con valores cerrados conocidos."
+  ],
+  "known_concerns_perceived_by_participant": [
+    "Ejemplo — registre limitaciones o preocupaciones percibidas en la solución. Se permite una lista vacía."
+  ],
+  "solution_sha256": "37ed50b34b3edc501848e5e2081f77335c6e17fbcb971e4fd93e56f9eb0714ad"
+}
