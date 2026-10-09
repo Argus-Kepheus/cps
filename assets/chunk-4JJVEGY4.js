@@ -1,5 +1,5 @@
-import{b as h}from"./chunk-FYMMFH3J.js";import{a as t}from"./chunk-55JHTTGY.js";import{a as i}from"./chunk-D2XV4R5X.js";import"./chunk-65ESAS5F.js";function o(){let e=`
-    <section class="home-hero">
+import{b as h}from"./chunk-FYMMFH3J.js";import{a as t}from"./chunk-55JHTTGY.js";import{a as i}from"./chunk-D2XV4R5X.js";import"./chunk-65ESAS5F.js";function l(){let e=`
+    <section class="home-hero" id="home-overview" data-reading-anchor>
       <div class="home-hero-copy">
         <p class="home-kicker" data-i18n="home.kicker">${i("home.kicker")}</p>
         <h1 data-i18n="home.title">${i("home.title")}</h1>
@@ -12,7 +12,7 @@ import{b as h}from"./chunk-FYMMFH3J.js";import{a as t}from"./chunk-55JHTTGY.js";
       </div>
     </section>
 
-    <section class="highlights-section" aria-labelledby="home-highlights-title">
+    <section class="highlights-section" id="home-highlights" data-reading-anchor aria-labelledby="home-highlights-title">
       <h2 id="home-highlights-title" data-i18n="home.highlights.title">${i("home.highlights.title")}</h2>
       <div class="highlights-grid">
         <article class="highlight-card">
@@ -29,4 +29,4 @@ import{b as h}from"./chunk-FYMMFH3J.js";import{a as t}from"./chunk-55JHTTGY.js";
         </article>
       </div>
     </section>
-  `;return t("home",e)}export{o as buildHomePage};
+  `;return t("home",e)}export{l as buildHomePage};

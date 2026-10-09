@@ -1,5 +1,5 @@
-import{a as e}from"./chunk-55JHTTGY.js";import{a}from"./chunk-D2XV4R5X.js";import"./chunk-65ESAS5F.js";function t(){return`
-    <details class="contact-section" open>
+import{a as e}from"./chunk-55JHTTGY.js";import{a}from"./chunk-D2XV4R5X.js";import"./chunk-65ESAS5F.js";function o(){return`
+    <details class="contact-section" id="contact-message" data-reading-anchor open>
       <summary data-i18n="contato.sections.message">${a("contato.sections.message")}</summary>
       <div class="contact-form">
         <form id="contact-form" action="https://formspree.io/f/xzzveoqq" method="POST">
@@ -33,17 +33,17 @@ import{a as e}from"./chunk-55JHTTGY.js";import{a}from"./chunk-D2XV4R5X.js";impor
         <div id="form-status" class="form-status hidden" role="status" aria-live="polite"></div>
       </div>
     </details>
-  `}function n(){let o=`
+  `}function n(){let t=`
     <h1 data-i18n="contato.title">${a("contato.title")}</h1>
     <p class="page-description" data-i18n="contato.description">${a("contato.description")}</p>
 
 
     <div class="contact-forms">
-      ${t()}
+      ${o()}
     </div>
 
-    <p class="contact-submission-note">
+    <p class="contact-submission-note" id="contact-submission-note" data-reading-anchor>
       <span data-i18n="contato.submissionNote">${a("contato.submissionNote")}</span>
       <a href="#desafios/mittag-leffler/participacao-teste" data-i18n="contato.submissionLink">${a("contato.submissionLink")}</a>
     </p>
-  `;return e("contato",o)}export{n as buildContatoPage};
+  `;return e("contato",t)}export{n as buildContatoPage};

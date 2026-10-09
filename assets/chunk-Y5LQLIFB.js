@@ -8,7 +8,7 @@ import{a as t}from"./chunk-DCTU4USQ.js";import{a as n}from"./chunk-55JHTTGY.js";
   `}async function u(){let r=(await t()).challenges.map(o).join(""),s=`
     <h1>${a(l("challenges.title"))}</h1>
     <p class="page-description">${a(l("challenges.intro"))}</p>
-    <div class="challenge-grid">
+    <div class="challenge-grid" id="challenges-list" data-reading-anchor>
       ${r||`<p>${a(l("challenges.empty"))}</p>`}
     </div>
   `;return n("challenges",s)}export{u as buildChallengesPage};

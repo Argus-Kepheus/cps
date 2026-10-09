@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-01T19:46:07.253Z",
+  "generatedAt": "2026-10-09T19:43:12.226Z",
   "site": {
     "siteUrl": "https://cps.arguskepheus.com.br",
     "basePath": "/",
@@ -12,7 +12,7 @@
   "assets": {
     "css": "assets/style-MDHGEJQD.css",
     "componentLoader": "assets/app-AHIV7DQA.js",
-    "js": "assets/app-23PGHF5N.js"
+    "js": "assets/app-7JD342QN.js"
   },
   "locales": {
     "es": "es.476f669707.json",
